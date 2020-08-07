@@ -30,6 +30,44 @@ html.h5p-iframe .h5p-container.h5p-dragquestion.h5p-semi-fullscreen {
   margin-right: 0;
 }
 
+.h5p-dragquestion.h5p-compact-mode {
+  overflow: hidden;
+}
+
+.h5p-dragquestion.h5p-compact-mode > .h5p-question-content {
+  margin: 0;
+}
+
+.h5p-dragquestion.h5p-compact-mode .h5p-question-buttons {
+  bottom: 0;
+  left: 0;
+  margin: 0 0 1em 1em;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.h5p-dragquestion.h5p-compact-mode .h5p-question-feedback {
+  display: none;
+}
+
+.h5p-dragquestion.h5p-compact-mode .h5p-question-scorebar {
+  display: none;
+}
+
+.h5p-dragquestion.h5p-auto-check .h5p-question-buttons {
+  display: none;
+}
+
+.h5p-dragquestion .h5p-question-buttons {
+  display: none;
+}
+
+.h5p-dragquestion .h5p-question-buttons.h5p-display-inline-block {
+  display: inline-block;
+}
+
 .h5p-dragquestion .h5p-static {
   background: #fff;
   position: absolute;

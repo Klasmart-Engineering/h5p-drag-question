@@ -63,6 +63,8 @@ function C(options, contentId, contentData) {
       showSolutionsRequiresInput: true,
       applyPenalties: true,
       enableScoreExplanation: true,
+      autoCheckSolutions: false,
+      compactMode: false,
       dropZoneHighlighting: 'dragging',
       autoAlignSpacing: 2,
       showScorePoints: true,
@@ -71,6 +73,10 @@ function C(options, contentId, contentData) {
     a11yCheck: 'Check the answers. The responses will be marked as correct, incorrect, or unanswered.',
     a11yRetry: 'Retry the task. Reset all responses and start the task over again.',
   }, options);
+
+  if (this.options.behaviour.compactMode) {
+    this.options.behaviour.showTitle = false;
+  }
 
   // If single point is enabled, it makes no sense displaying
   // the score explanation. Note: In the editor, the score explanation is hidden
@@ -180,6 +186,11 @@ function C(options, contentId, contentData) {
     draggable.on('interacted', function () {
       self.answered = true;
       self.triggerXAPI('interacted');
+
+      if (self.options.behaviour.autoCheckSolutions && self.getScore() >= self.getMaxScore()) {
+        $('.h5p-question-check-answer').click();
+        $('.h5p-question-buttons').addClass('h5p-display-inline-block');
+      }
     });
     draggable.on('leavingDropZone', function (event) {
       self.dropZones[event.data.dropZone].removeAlignable(event.data.$);
@@ -286,7 +297,7 @@ C.prototype.registerDomElements = function () {
 
   // Set class if no background
   var classes = '';
-  if (this.options.question.settings.background !== undefined) {
+  if (this.options.question.settings.background !== undefined && !self.options.behaviour.compactMode) {
     classes += 'h5p-dragquestion-has-no-background';
   }
   if (self.options.behaviour.dropZoneHighlighting === 'always' ) {
@@ -350,6 +361,19 @@ C.prototype.registerDomElements = function () {
   self.registerButtons();
 
   setTimeout(function () {
+    // Auto check?
+    if (self.options.behaviour.autoCheckSolutions) {
+      $('.h5p-dragquestion').addClass('h5p-auto-check');
+    }
+    else {
+      $('.h5p-question-buttons').addClass('h5p-display-inline-block');
+    }
+
+    // Use full canvas
+    if (self.options.behaviour.compactMode) {
+      $('.h5p-dragquestion').addClass('h5p-compact-mode');
+    }
+
     self.trigger('resize');
   }, 200);
 };

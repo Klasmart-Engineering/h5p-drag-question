@@ -404,6 +404,24 @@
         }
       },
       {
+        "name": "autoCheckSolutions",
+        "type": "boolean",
+        "label": "Check solution automatically",
+        "importance": "low",
+        "description": "If this field is set, the content type will check for completion automatically without showing the check button.",
+        "default": false,
+        "optional": true
+      },
+      {
+        "name": "compactMode",
+        "type": "boolean",
+        "label": "Compact mode",
+        "importance": "low",
+        "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback.",
+        "default": false,
+        "optional": true
+      },
+      {
         "name": "backgroundOpacity",
         "type": "text",
         "label": "Background opacity for draggables",
