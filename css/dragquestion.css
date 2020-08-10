@@ -56,6 +56,11 @@ html.h5p-iframe .h5p-container.h5p-dragquestion.h5p-semi-fullscreen {
   display: none;
 }
 
+.h5p-dragquestion.h5p-auto-check .h5p-draggable.h5p-correct::after,
+.h5p-dragquestion.h5p-auto-check .h5p-draggable.h5p-wrong::after {
+  content: "";
+}
+
 .h5p-dragquestion.h5p-auto-check .h5p-question-buttons {
   display: none;
 }
