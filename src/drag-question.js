@@ -359,23 +359,6 @@ C.prototype.registerDomElements = function () {
 
   // ... and buttons
   self.registerButtons();
-
-  setTimeout(function () {
-    // Auto check?
-    if (self.options.behaviour.autoCheckSolutions) {
-      $('.h5p-dragquestion').addClass('h5p-auto-check');
-    }
-    else {
-      $('.h5p-question-buttons').addClass('h5p-display-inline-block');
-    }
-
-    // Use full canvas
-    if (self.options.behaviour.compactMode) {
-      $('.h5p-dragquestion').addClass('h5p-compact-mode');
-    }
-
-    self.trigger('resize');
-  }, 200);
 };
 
 /**
@@ -718,6 +701,26 @@ C.prototype.resize = function (e) {
   if (this.$container === undefined || !this.$container.is(':visible')) {
     // Not yet attached or visible – not possible to resize correctly
     return;
+  }
+
+  /*
+   * This is added here, because we need to set classes to the main container
+   * that may be under the control of a compound content type like IV and the
+   * wrapping container can change.
+   */
+  this.$mainContainer = this.$container.parents('.h5p-dragquestion');
+
+  // Auto check?
+  if (self.options.behaviour.autoCheckSolutions) {
+    this.$mainContainer.addClass('h5p-auto-check');
+  }
+  else {
+    this.$container.find('.h5p-question-buttons').addClass('h5p-display-inline-block');
+  }
+
+  // Use full canvas
+  if (self.options.behaviour.compactMode) {
+    this.$mainContainer.addClass('h5p-compact-mode');
   }
 
   // Update background opacity for dropzones (in case they were not previously
