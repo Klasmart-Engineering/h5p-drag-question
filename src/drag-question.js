@@ -182,7 +182,7 @@ function C(options, contentId, contentData) {
 
       this.resetAudios();
 
-      if (currentDraggable.audios.pickedUp) {
+      if (currentDraggable.audios && currentDraggable.audios.pickedUp) {
         currentDraggable.audios.pickedUp.play();
       }
       else {
@@ -205,7 +205,7 @@ function C(options, contentId, contentData) {
         self.resetAudios();
 
         const currentDraggable = self.draggables[event.data];
-        if (currentDraggable.audios.dropped) {
+        if (currentDraggable.audios && currentDraggable.audios.dropped) {
           currentDraggable.audios.dropped.play();
         }
         else {
