@@ -180,6 +180,10 @@ function C(options, contentId, contentData) {
     draggable.on('pickedUp', (event) => {
       const currentDraggable = self.draggables[event.data];
 
+      if (this.taskCompleted) {
+        return;
+      }
+
       this.resetAudios();
 
       if (currentDraggable.audios && currentDraggable.audios.pickedUp) {
@@ -201,7 +205,7 @@ function C(options, contentId, contentData) {
     });
     draggable.on('dragend', function (event) {
       // The special dropped sounds are more important and should not be stopped
-      if (!self.isAudioPlaying(['droppedWrong', 'droppedCorrect'])) {
+      if (!self.isAudioPlaying(['droppedWrong', 'droppedCorrect']) && !this.taskCompleted) {
         self.resetAudios();
 
         const currentDraggable = self.draggables[event.data];
@@ -655,6 +659,7 @@ C.prototype.addSolutionButton = function () {
   var that = this;
 
   this.addButton('check-answer', this.options.scoreShow, function () {
+    that.taskCompleted = true;
     that.answered = true;
     that.showAllSolutions();
     that.showScore();
@@ -962,6 +967,7 @@ C.prototype.resetTask = function () {
   this.points = 0;
   this.rawPoints = 0;
   this.answered = false;
+  this.taskCompleted = false;
 
   this.dropZones.forEach(function (dropzone) {
     dropzone.reset();
