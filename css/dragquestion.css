@@ -65,10 +65,6 @@ html.h5p-iframe .h5p-container.h5p-dragquestion.h5p-semi-fullscreen {
   display: none;
 }
 
-.h5p-dragquestion .h5p-question-buttons {
-  display: none;
-}
-
 .h5p-dragquestion .h5p-question-buttons.h5p-display-inline-block {
   display: inline-block;
 }
