@@ -40,10 +40,22 @@
                   {
                     "description": "Elija el tipo de contenido que le gustaría añadir."
                   },
-                  {},
-                  {},
-                  {},
-                  {},
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
                   {
                     "label": "Seleccione zonas de caída"
                   },
@@ -83,10 +95,22 @@
                   {
                     "label": "Mostrar etiqueta"
                   },
-                  {},
-                  {},
-                  {},
-                  {},
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
                   {
                     "label": "Seleccionar elementos correctos"
                   },
@@ -141,7 +165,10 @@
               {
                 "label": "Rango de Puntaje"
               },
-              {},
+              {
+                "one": "",
+                "other": ""
+              },
               {
                 "label": "Realimentación para rango definido de puntaje",
                 "placeholder": "LLene la realimentación"

@@ -19,7 +19,7 @@
           "fields": [
             {
               "label": "배경이미지",
-              "description": "(선택사항) 끌어서 놓기 작업의 배경으로 사용할 이미지를 선택하십시오."
+              "description": "드래그 및 드롭 작업의 배경으로 사용할 이미지를 선택합니다. (선택사항)"
             },
             {
               "label": "태스트 영역 크기",
@@ -29,7 +29,7 @@
         },
         {
           "label": "과제",
-          "description": "드롭 존을 배치하여 시작하십시오. <br /> 다음, 드랍할 수 있는 요소를 놓고 적절한 드롭 존에 체크한다.<br /> 마지막으로 드롭존을 다시 편집하여 정답을 체크한다.",
+          "description": "드롭 존을 배치하여 시작하십시오. <br /> 다음으로, 드롭 가능한 요소를 배치하고 적절한 드롭 영역을 확인하십시오. <br /> 마지막으로 드롭존을 다시 수정하고 정답을 체크하세요.",
           "fields": [
             {
               "label": "요소",
@@ -40,10 +40,22 @@
                   {
                     "description": "더하고 싶은 콘텐츠 유형 선택."
                   },
-                  {},
-                  {},
-                  {},
-                  {},
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
                   {
                     "label": "드롭 영역 선택"
                   },
@@ -55,16 +67,16 @@
                     "description": "이 항목을 여러 드롭 영역으로 끌 수 있도록 복제하세요."
                   },
                   {
-                    "label": "Audio",
-                    "description": "Audio samples",
+                    "label": "오디오",
+                    "description": "오디오 샘플",
                     "fields": [
                       {
-                        "label": "Picked up",
-                        "description": "Custom audio to play when draggable is picked up. Will override general audio setting."
+                        "label": "선택",
+                        "description": "드래그 가능 항목을 선택할 때 재생할 사용자 지정 오디오입니다. 일반 오디오 설정을 무시합니다."
                       },
                       {
-                        "label": "Dropped",
-                        "description": "Custom audio to play when draggable is dropped. Will override general audio setting."
+                        "label": "드롭됨",
+                        "description": "드래그 가능을 놓을 때 재생할 사용자 지정 오디오입니다. 일반 오디오 설정을 무시합니다."
                       }
                     ]
                   }
@@ -78,15 +90,27 @@
                 "label": "드롭 영역",
                 "fields": [
                   {
-                    "label": "레이블"
+                    "label": "텍스트 레이블"
                   },
                   {
-                    "label": "레이블 보이기"
+                    "label": "텍스트 레이블 보이기"
                   },
-                  {},
-                  {},
-                  {},
-                  {},
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
+                  {
+                    "one": "",
+                    "other": ""
+                  },
                   {
                     "label": "올바른 요소 선택"
                   },
@@ -101,17 +125,17 @@
                       },
                       {
                         "label": "올바른 매치에 대해 표시할 메시지",
-                        "description": "끌어 놓기 정답이 맞으면 \"check\" 에서 과제 아래에 메시지가 표시됨."
+                        "description": "끌어 놓기 정답이 맞으면 \"확인\" 에서 과제 아래에 메시지가 표시됨."
                       },
                       {
                         "label": "올바르지 않은 매치에 대해 표시할 메시지",
-                        "description": "끌어 놓기 정답이 틀리면 \"check\" 에서 과제 아래에 메시지가 표시됨.."
+                        "description": "일치 항목이 올바르지 않은 경우 \"확인\" 작업 아래에 메시지가 나타납니다."
                       }
                     ]
                   },
                   {
                     "label": "이 드롭 영역은 한 항목만 포함할 수 있음",
-                    "description": "이 드롭 영역에 대한 정답이 하나만 있는지 확인"
+                    "description": "이 드롭 영역에 대한 정답이 하나뿐인지 확인하십시오."
                   },
                   {
                     "label": "자동 정렬 활성화",
@@ -134,14 +158,17 @@
             }
           ],
           "label": "점수 범위에 대한 사용자 지정 피드백 정의",
-          "description": "\"Add range\" (범위 추가) 버튼을 클릭하여 필요한 만큼의 범위를 추가하십시오. 예: 0-20% 낮은 점수, 21-91% 평균 점수, 91-100% 높은 점수!",
+          "description": "\"범위 추가\" 버튼을 클릭하여 필요한 만큼 범위를 추가하십시오. 예: 0-20% 나쁜 점수, 21-91% 평균 점수, 91-100% 좋은 점수!",
           "entity": "범위",
           "field": {
             "fields": [
               {
                 "label": "점수 범위"
               },
-              {},
+              {
+                "one": "",
+                "other": ""
+              },
               {
                 "label": "정의된 점수 범위에 대한 피드백",
                 "placeholder": "피드백 작성"
@@ -152,36 +179,36 @@
       ]
     },
     {
-      "label": "Audio",
-      "description": "Audio samples",
+      "label": "오디오",
+      "description": "오디오 샘플",
       "fields": [
         {
-          "label": "Picked up",
-          "description": "Audio to play when draggable is picked up."
+          "label": "선택",
+          "description": "드래그 가능 항목을 선택할 때 재생할 오디오입니다."
         },
         {
-          "label": "Dropped",
-          "description": "Audio to generally play when draggable is dropped."
+          "label": "드롭됨",
+          "description": "드래그 가능한 것을 놓을 때 일반적으로 재생할 오디오입니다."
         },
         {
-          "label": "Dropped correctly",
-          "description": "Audio to play when draggable is dropped on correct dropzone."
+          "label": "제대로 드롭됨",
+          "description": "드래그 가능한 항목을 올바른 드롭존에 놓을 때 재생할 오디오입니다."
         },
         {
-          "label": "Dropped wrong",
-          "description": "Audio to play when draggable is dropped on wrong dropzone."
+          "label": "잘못 드롭됨",
+          "description": "드래그 가능한 항목을 잘못된 드롭존에 놓을 때 재생할 오디오입니다."
         }
       ]
     },
     {
       "label": "행동 설정",
-      "description": "이 설정은 과제를 해결하는 과정을 통제.",
+      "description": "이 옵션을 사용하면 동작이 작동하는 방식을 제어할 수 있습니다.",
       "fields": [
         {
-          "label": "\"Retry\" (재시도) 활성화"
+          "label": "\"재시도\" 활성화"
         },
         {
-          "label": "\"Check\" (체크) 버튼 활성화"
+          "label": "\"확인\" 버튼 활성화"
         },
         {
           "label": "해답을 보기 전에 사용자 입력 필수"
@@ -191,23 +218,23 @@
           "description": "올바르게 배치된 각 드래그 항목에 대해 1포인트를 부여할 수 없음."
         },
         {
-          "label": "벌칙 점수 주기",
-          "description": "잘못된 드롭 영역에 떨어뜨린 항목에 대해 벌칙을 적용한다. 동일한 항목를 여러 드롭 존으로 떨어뜨릴 수 있거나 드롭 존이 하나만 있는 경우 이 기능을 활성화해야 한다. 이 기능이 활성화되지 않으면 학습자는 모든 항목을 모든 드롭존에 일치시키고 항상 만점을 받을 수 있다."
+          "label": "페널티 적용",
+          "description": "잘못된 드롭 영역에 드롭된 요소에 대해 페널티를 적용합니다. 동일한 요소를 여러 놓기 영역에 놓을 수 있는 경우 또는 놓기 영역이 하나만 있는 경우 활성화해야 합니다. 이것이 활성화되지 않으면 학습자는 모든 항목을 모든 드롭존에 일치시킬 수 있으며 항상 전체 점수를 받을 수 있습니다."
         },
         {
           "label": "점수 설명 활성화",
-          "description": "사용자의 답변을 확인할 때 점수 설명을 표시하십시오('벌칙 적용' 옵션이 선택된 경우)"
+          "description": "사용자의 답변을 확인할 때 점수 설명을 표시하십시오('페널티 적용' 옵션이 선택된 경우)"
         },
         {
           "label": "드래그 항목의 배경 불투명도",
-          "description": "이 필드가 설정되면 끌 수 있는 모든 요소에 설정된 불투명도를 재정의한다. 이 값은 0과 100 사이의 숫자여야 하며, 여기서 0은 완전한 투명성을 의미하며 100은 투명성이 없음을 의미함."
+          "description": "이 필드가 설정되면 모든 드래그 가능한 요소에 설정된 불투명도가 무시됩니다. 0에서 100 사이의 숫자여야 합니다. 여기서 0은 완전한 투명도를 의미하고 100은 투명도가 없음을 의미합니다."
         },
         {
           "label": "드롭 영역 하이라이트",
           "description": "드롭 영역을 하이라이트할 때 선택.",
           "options": [
             {
-              "label": "끌 때"
+              "label": "드래그할 때"
             },
             {
               "label": "항상"
@@ -226,33 +253,33 @@
         },
         {
           "label": "점수 표시",
-          "description": "각 답변에 대해 획득한 점수를 표시함. '전체 작업에 대해 1점 부여' 옵션이 활성화된 경우 사용할 수 없음"
+          "description": "각 답변에 대해 획득한 포인트를 표시합니다. '전체 작업에 1점 제공' 옵션이 활성화된 경우 사용할 수 없습니다."
         },
         {
           "label": "제목 표시",
-          "description": "이 제목을 표시하지 않으려면 이 옵션의 선택을 취소하십시오. 제목은 요약, 통계 등에만 표시."
+          "description": "이 제목이 표시되지 않도록 하려면 이 옵션을 선택 취소합니다. 제목은 요약, 통계 등에만 표시됩니다."
         }
       ]
     },
     {
-      "label": "맞춤화",
+      "label": "번역",
       "fields": [
         {
-          "label": "전체화면 레이블",
+          "label": "전체화면 텍스트 레이블",
           "default": "전체화면"
         },
         {
-          "label": "전체 화면 종료 레이블",
+          "label": "전체 화면 종료 텍스트 레이블",
           "default": "전체 화면 종료"
         }
       ]
     },
     {
-      "label": "끌기 항목에 대한 사전 개요",
+      "label": "끌기 가능한 접두사",
       "default": "끌기 항목 총 {total} 중 {num} 개 ."
     },
     {
-      "label": "끌기 항목 사후 개요",
+      "label": "끌기 가능한 접미사",
       "default": "드롭영역에 놓은 개수 {num}."
     },
     {
@@ -260,23 +287,23 @@
       "default": "드롭 영역 총 {total} 중 {num} 개."
     },
     {
-      "label": "드롭 영역 미선택 레이블",
+      "label": "드롭 영역 미선택 텍스트 레이블",
       "default": "드롭 영역 없음."
     },
     {
-      "label": "팁 버튼 표시 레이블",
+      "label": "팁 버튼 표시 텍스트 레이블",
       "default": "팁 표시"
     },
     {
-      "label": "이용가능한 팁 레이블",
+      "label": "이용가능한 팁 텍스트 레이블",
       "default": "팁 이용가능"
     },
     {
-      "label": "정답을 위한 레블",
+      "label": "정답 텍스트 레이블",
       "default": "정답"
     },
     {
-      "label": "오답에 대한 레이블",
+      "label": "오답에 대한 텍스트 레이블",
       "default": "오답"
     },
     {
@@ -284,21 +311,20 @@
       "default": "피드백"
     },
     {
-      "label": "자동 문장 읽어주기를 사용하는 사람들을 위한 점수 막대의 텍스트 표현",
-      "default": "총 :total 점 중 :num 을 획득하였습니다. "
+      "label": "자동 읽어주기 기능 사용자를 위한 점수 막대의 텍스트 표현",
+      "default": "총 :total 점 중 :num 을 획득하였습니다."
     },
     {
       "label": "점수 설명 버튼의 텍스트 표현",
       "default": "점수 설명 표시"
     },
     {
-      "label": "\"Check\" (체크) 버튼에 대한 보조 기술 레이블",
-      "default": "정답을 확인하세요. 답변은 정답, 오답, 미답변으로 표기가 됩니다."
+      "label": "\"확인\" 버튼에 대한 시각장애 보조용 텍스트",
+      "default": "정답을 확인하세요. 답변은 정답, 오답, 미답변으로 표기됩니다."
     },
     {
-      "label": "\"Retry\" 버튼의 보조 기술 레이블",
-      "default": "재시도하세요. 모든 답변을 초기화하고 새로 시작하세요."
-
+      "label": "\"재시도\" 버튼에 대한 시각장애 보조용 텍스트",
+      "default": "작업을 다시 시도하십시오. 모든 응답을 재설정하고 작업을 다시 시작하십시오."
     }
   ]
 }
