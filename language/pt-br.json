@@ -199,6 +199,14 @@
           "description": "Exibe uma explicação da pontuação para o usuário quando ele marca suas respostas (se a opção 'Aplicar penalidades' tiver sido selecionada)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Opacidade do plano de fundo para arrastáveis",
           "description": "Se este campo estiver marcado irá sobrepor as configurações de opacidade para todos os elementos arrastáveis. Deve ser um número entre 0 e 100, onde 0 significa transparência total e 100 significa nenhuma transparência."
         },

@@ -199,6 +199,14 @@
           "description": "在检查答案时，能向使用者显示分数说明(当有启用”处罚”功能时)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "背景不透明化设定",
           "description": "设定不透明度将涵盖所有可拖曳元素。设定数值为0至100之间的数字，其中0表示完全透明，100表示完全不透明。"
         },

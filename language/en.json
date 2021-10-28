@@ -226,6 +226,14 @@
           "description": "Display a score explanation to user when checking their answers (if the 'Apply penalties' option has been selected)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Background opacity for draggables",
           "description": "If this field is set, it will override opacity set on all draggable elements. This should be a number between 0 and 100, where 0 means full transparency and 100 means no transparency"
         },

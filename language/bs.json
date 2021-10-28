@@ -199,6 +199,14 @@
           "description": "Display a score explanation to user when checking their answers (if the 'Apply penalties' option has been selected)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Pozadinska zamućenost za elemente za uzimanje",
           "description": "Ako je ovo polje određeno onda će biti poništena sva podešavanja o zamuženosti svih drugih elemenata. Ovo treba biti broj od 0 do 100, gdje 0 znači potpuna transparentnost, a 100 znači bez transparentnosti"
         },

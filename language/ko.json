@@ -226,6 +226,14 @@
           "description": "사용자의 답변을 확인할 때 점수 설명을 표시하십시오('페널티 적용' 옵션이 선택된 경우)"
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "드래그 항목의 배경 불투명도",
           "description": "이 필드가 설정되면 모든 드래그 가능한 요소에 설정된 불투명도가 무시됩니다. 0에서 100 사이의 숫자여야 합니다. 여기서 0은 완전한 투명도를 의미하고 100은 투명도가 없음을 의미합니다."
         },

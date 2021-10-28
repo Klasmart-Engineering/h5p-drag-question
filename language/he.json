@@ -199,6 +199,14 @@
           "description": "הצגת הסבר על הניקוד למשתמש בעת בדיקת תשובות (אם האפשרות \"החלת עונשים\" נבחרה)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "שקיפות רקע לפריטים נגררים",
           "description": "אם לשדה זה נקבע ערך, הוא ידרוס את ערכי השקיפות של כל הרכיבים. הוא צריך להיות מספר בין 0 ו-100, כאשר 0 משמעו שקיפות מלאה ו-100 משמעו שאין שקיפות"
         },

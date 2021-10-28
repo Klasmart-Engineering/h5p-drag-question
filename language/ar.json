@@ -199,6 +199,14 @@
           "description": "عرض شرح النتيجة للمستخدم عند التحقق من إجاباته (إذا تم اختيار خيار 'تطبيق العقوبات')."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "تعتيم الخلفية للعناصر القابلة للسحب",
           "description": "إذا تم تعيين هذا الحقل ، فستتجاوز مجموعة التعتيم على جميع العناصر القابلة للسحب. يجب أن يكون هذا الرقم بين 0 و 100 ، حيث 0 يعني الشفافية الكاملة و 100 يعني عدم الشفافية"
         },

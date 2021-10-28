@@ -199,6 +199,14 @@
           "description": "Показвайте обяснение за оценка на ученика, когато той проверява своите отговори (ако е избрана опцията „Прилагане на наказания“)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Фонова непрозрачност за draggables",
           "description": "Ако това поле е попълнено, това ще замени непрозрачността, зададена за всички елементи, които могат да се плъзгат. Това трябва да бъде число между 0 и 100, където 0 означава пълна прозрачност, а 100 означава липса на прозрачност."
         },

@@ -199,6 +199,14 @@
           "description": "Kuva kasutajale tema vastuste kontrollimisel punktisumma selgitus (kui 'Määra trahvid' valik on märgitud)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Tausta läbipaistvus lohistatavatele elementidele",
           "description": "Märgitud välja puhul kohaldatakse kõigi lohistatavate elementide taustale. Numbrivahemik on 0 (täiesti läbipaistev) kuni 100 (ei paista läbi)."
         },

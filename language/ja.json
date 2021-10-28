@@ -199,6 +199,14 @@
           "description": "（「ペナルティを適用する」オプションが選択されている 場合）答えをチェックするとき、得点の説明をユーザーに表示します。"
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "ドラッグするものの背景の不透明度",
           "description": "このフィールドを設定すると、すべてのドラッグ要素に設定された不透明度を上書きします。これは 0と100 の間の数値をとり、0は完全な透明、100は透明度がないことを意味します。"
         },

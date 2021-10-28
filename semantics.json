@@ -166,7 +166,7 @@
                       "name": "dropped",
                       "type": "audio",
                       "label": "Dropped",
-                      "description": "Custom Custom audio to play when draggable is dropped. Will override general audio setting.",
+                      "description": "Custom audio to play when draggable is dropped. Will override general audio setting.",
                       "importance": "low"
                     }
                   ]

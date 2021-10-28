@@ -199,6 +199,14 @@
           "description": "Покажіть користувачеві пояснення щодо оцінки, перевіряючи його відповіді (якщо вибрано варіант (Застосувати штрафні санкції))."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Непрозорість тла при перетягуванні",
           "description": "Якщо це відмічено зміниться прозорість, встановлена для всіх перетягуваних елементів. Це має бути число від 0 до 100, де 0 означає повну прозорість, а 100 - відсутність прозорості"
         },

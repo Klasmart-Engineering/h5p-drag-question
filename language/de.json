@@ -199,6 +199,14 @@
           "description": "Zeige eine Erklärung an, wie Punkte vergeben wurden, wenn die Lernenden ihre Antworten prüfen (falls \"Strafpunkte vergeben\" aktiviert ist)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Hintergrunddeckkraft für bewegliche Elemente",
           "description": "Wenn dieses Feld gesetzt ist, wird dadurch die Hintergrunddeckkraft für alle beweglichen Elemente überschrieben. Es sollte eine Zahl zwischen 0 und 100 sein, wobei 0 für vollständige Transparenz steht und 100 für keine Transparenz."
         },

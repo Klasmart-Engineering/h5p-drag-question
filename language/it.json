@@ -199,6 +199,14 @@
           "description": "Visualizza una spiegazione del punteggio all'utente quando controlla le sue risposte (se è stata selezionata l'opzione 'Applica penalità')."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Opacità Sfondo per elementi trascinabili",
           "description": "Se questo campo è impostato, il parametro di opacità sarà sovrascritto su tutti gli elementi trascinabili. Tale parametro dovrebbe ricevere un numero compreso tra 0 e 100, dove 0 indica la piena trasparenza e 100 equivale a nessuna trasparenza"
         },

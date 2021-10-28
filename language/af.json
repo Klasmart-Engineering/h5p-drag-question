@@ -199,6 +199,14 @@
           "description": "Vertoon 'n verduideliking van telling wanneer gebruiker op antwoord klik (indien die 'Pas strawwe toe' opsie gekies is)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Agtergrond deursigtigheid vir trekbares",
           "description": "As hierdie veld ingestel is, sal dit die deursigtigheid van alle sleepbare elemente oorheers. Dit moet 'n getal tussen 0 en 100 wees, waar 0 volle deursigtigheid beteken en 100 geen deursigtigheid beteken nie"
         },

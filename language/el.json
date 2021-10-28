@@ -199,6 +199,14 @@
           "description": "Εμφάνιση επεξήγησης βαθμολογίας στον χρήστη κατά τον έλεγχο των απαντήσεων (εάν η επιλογή \"Αφαίρεση βαθμών\" έχει ενεργοποιηθεί)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Διαφάνεια φόντου για συρόμενα στοιχεία",
           "description": "Εάν οριστεί αυτό το πεδίο, θα αντικαταστήσει όλες τις προεπιλεγμένες ρυθμίσεις διαφάνειας στα συρόμενα στοιχεία. Θα πρέπει να οριστεί μια τιμή ανάμεσα σε 0 και 100, όπου το 0 ισοδυναμεί με πλήρη διαφάνεια και το 100 με καθόλου διαφάνεια"
         },

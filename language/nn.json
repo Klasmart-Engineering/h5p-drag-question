@@ -199,6 +199,14 @@
           "description": "Display a score explanation to user when checking their answers (if the 'Apply penalties' option has been selected)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Bakgrunnsopasitet på flyttbare elementer",
           "description": "Hvis denne verdien er satt, vil den overstyre instillingene til alle flyttbare elementer. Feltet skal inneholde verdier fra 0 til 100, hvor 0 betyr full gjennsomsiktighet og 100 betyr ingen gjennomsiktighet"
         },

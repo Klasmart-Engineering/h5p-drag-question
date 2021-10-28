@@ -199,6 +199,14 @@
           "description": "Erakutsi puntuazioaren azalpena erabiltzaileak bere erantzunak egiaztatzean (baldin eta \"Aplikatu zigorrak\" opzioa hautatuta badago)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Atzeko planoaren opakutasuna arrastagarrietarako",
           "description": "Eremu hau ezarrita badago, elementu arrastagarri guztien opakotasuna gainidatziko du. 0 eta 100 bitarteko zenbaki bat izan behar luke, non 0 erabat gardena da eta 100 erabat opakua."
         },

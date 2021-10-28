@@ -199,6 +199,14 @@
           "description": "Při kontrole jejich odpovědí zobrazte vysvětlení skóre uživateli (pokud byla vybrána možnost Použít sankce)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Neprůhlednost pozadí při přetahování",
           "description": "Pokud je toto pole nastaveno, přepíše neprůhlednost nastavenou na všech přesouvaných prvcích. To by mělo být číslo mezi 0 a 100, kde 0 znamená úplnou průhlednost a 100 znamená neprůhlednost"
         },

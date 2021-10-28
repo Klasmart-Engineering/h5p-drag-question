@@ -199,6 +199,14 @@
           "description": "Näytä pisteiden selite, kun käyttäjä tarkistaa vastauksensa (jos Rankaise vääristä vastauksista on valittuna)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Raahattavien taustan läpinäkyvyys",
           "description": "Tämän valitseminen yliajaa raahattavien elementtien läpinäkyvyysasetukset. Tämän pitää olla numeroarvo välillä 0-100, missä 0 tarkoittaa täyttä läpinäkyvyyttä ja 100 ei lainkaan läpinäkyvyyttä."
         },

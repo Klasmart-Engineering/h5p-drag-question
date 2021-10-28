@@ -199,6 +199,14 @@
           "description": "Udeleženci lahko po ogledu rezultatov vidijo pojasnilo točkovanja (npr. nepravilen odgovor se točkuje z -1 točko)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Določi prekrivnost ozadja elementov",
           "description": "Nastavitev prekrivnosti ozadja elementov glede na sliko v ozadju (0 pomeni prosojnost, 100 pa popolno prekrivnosti)."
         },

@@ -199,6 +199,14 @@
           "description": "Mostrar a explicação do resultado ao utilizador enquanto este estiver a verificar as suas respostas (se a opção de 'Ativar penalizações' estiver selecionada)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Opacidade do fundo para os elementos",
           "description": "Se este campo estiver definido, o seu valor vai sobrepor-se ao valor da opacidade em todos os elementos. Este valor deve ser um número entre 0 e 100, onde 0 significa completamente transparente e 100 completamente opaco."
         },

@@ -199,6 +199,14 @@
           "description": "Wyświetla użytkownikom dodatkowe informacje o uzyskanym wyniku, podczas sprawdzania odpowiedzi (jeżeli opcja 'Stosuj karne punkty' jest aktywna)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Poziom nieprzezroczystości tła (Background Opacity) przeciąganych elementów",
           "description": "Jeżeli to pole jest wypełnione, nadpisuje ono parametr nieprzezroczystości obowiązujący dla wszystkich przeciąganych elementów. Wartość powinna być w przedziale od 0 do 100, gdzie 0 oznacza pełną przezroczystość, a 100 oznacza brak przezroczystości"
         },

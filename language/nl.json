@@ -199,6 +199,14 @@
           "description": "Toon een score toelichting aan de gebruiker als deze de antwoorden controleert (als de 'Sta puntenaftrek toe optie is aangevinkt)."
         },
         {
+          "label": "Check solution automatically",
+          "description": "If this field is set, the content type will check for completion automatically without showing the check button."
+        },
+        {
+          "label": "Compact mode",
+          "description": "If this field is set, the content will use the full area defined by the task size ratio and not show detailed feedback."
+        },
+        {
           "label": "Achtergrond transparantie voor elementen",
           "description": "Als dit veld is ingevuld, dan zal het de transparantie van alle sleepbare elementen overschrijven. Dit moet een getal zijn tussen de 0 en de 100, waarbij 0 volledige doorschijnend is en 100 volledig ondoorzichtig"
         },
