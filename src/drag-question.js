@@ -227,8 +227,8 @@ function C(options, contentId, contentData) {
       self.triggerXAPI('interacted');
 
       if (self.options.behaviour.autoCheckSolutions && self.getScore() >= self.getMaxScore()) {
-        $('.h5p-question-check-answer').click();
-        $('.h5p-question-buttons').addClass('h5p-display-inline-block');
+        self.$mainContainer.find('.h5p-question-check-answer').click();
+        self.$mainContainer.find('.h5p-question-buttons').addClass('h5p-display-inline-block');
       }
     });
     draggable.on('leavingDropZone', function (event) {
