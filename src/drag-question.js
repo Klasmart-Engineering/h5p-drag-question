@@ -675,14 +675,14 @@ C.prototype.addSolutionButton = function () {
     that.addExplanation();
 
     // Emit screenshot
-    setTimeout(() => {
+    setTimeout(function () {
       if (H5P && H5P.KLScreenshot) {
         H5P.KLScreenshot.takeScreenshot(
           that,
           that.$mainContainer.get(0)
         );
       }
-    }, 500); // Give result time to appear
+    }, 1000); // Give result time to appear
 
     var xAPIEvent = that.createXAPIEventTemplate('answered');
     that.addQuestionToXAPI(xAPIEvent);
