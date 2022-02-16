@@ -673,6 +673,17 @@ C.prototype.addSolutionButton = function () {
     that.showAllSolutions();
     that.showScore();
     that.addExplanation();
+
+    // Emit screenshot
+    setTimeout(() => {
+      if (H5P && H5P.KLScreenshot) {
+        H5P.KLScreenshot.takeScreenshot(
+          that,
+          that.$mainContainer.get(0)
+        );
+      }
+    }, 500); // Give result time to appear
+
     var xAPIEvent = that.createXAPIEventTemplate('answered');
     that.addQuestionToXAPI(xAPIEvent);
     that.addResponseToXAPI(xAPIEvent);
