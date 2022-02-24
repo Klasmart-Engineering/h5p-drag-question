@@ -3,8 +3,8 @@
   "description": "Drag and drop the elements into the correct drop zones.",
   "contentType": "Question",
   "majorVersion": 1,
-  "minorVersion": 13,
-  "patchVersion": 14,
+  "minorVersion": 14,
+  "patchVersion": 0,
   "embedTypes": [
     "iframe"
   ],
@@ -34,6 +34,11 @@
       "minorVersion": 5
     },
     {
+      "machineName": "FontKidsLoop",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
       "machineName": "jQuery.ui",
       "majorVersion": 1,
       "minorVersion": 10
@@ -41,19 +46,19 @@
     {
       "machineName": "H5P.JoubelUI",
       "majorVersion": 1,
-      "minorVersion": 3
+      "minorVersion": 4
     },
     {
       "machineName": "H5P.Question",
       "majorVersion": 1,
-      "minorVersion": 4
+      "minorVersion": 5
     }
   ],
   "editorDependencies": [
     {
       "machineName": "H5PEditor.DragQuestion",
       "majorVersion": 1,
-      "minorVersion": 10
+      "minorVersion": 11
     },
     {
       "machineName": "H5PEditor.RangeList",
