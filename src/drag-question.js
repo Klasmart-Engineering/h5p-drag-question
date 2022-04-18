@@ -88,7 +88,13 @@ function C(options, contentId, contentData) {
 
   this.draggables = [];
   this.dropZones = [];
-  this.answered = (contentData && contentData.previousState !== undefined && contentData.previousState.answers !== undefined && contentData.previousState.answers.length);
+
+  this.previousState = contentData && contentData.previousState || {};
+
+  this.answered = (this.previousState.answers !== undefined && this.previousState.answers.length);
+
+  this.setViewState(this.previousState.viewState || 'task');
+
   this.blankIsCorrect = true;
 
   this.players = {};
@@ -154,8 +160,8 @@ function C(options, contentId, contentData) {
 
     // Restore answers from last session
     var answers = null;
-    if (contentData && contentData.previousState !== undefined && contentData.previousState.answers !== undefined && contentData.previousState.answers[i] !== undefined) {
-      answers = contentData.previousState.answers[i];
+    if (this.previousState.answers !== undefined && this.previousState.answers[i] !== undefined) {
+      answers = this.previousState.answers[i];
     }
 
     // Create new draggable instance
@@ -410,6 +416,10 @@ C.prototype.registerDomElements = function () {
 
   // ... and buttons
   self.registerButtons();
+
+  if (this.viewState === 'results') {
+    this.handleCheckAnswer({ skipXAPI: true });
+  }
 };
 
 /**
@@ -668,12 +678,31 @@ C.prototype.addSolutionButton = function () {
   var that = this;
 
   this.addButton('check-answer', this.options.scoreShow, function () {
-    that.taskCompleted = true;
-    that.answered = true;
-    that.showAllSolutions();
-    that.showScore();
-    that.addExplanation();
+    that.handleCheckAnswer();
+  }, true, {
+    'aria-label': this.options.a11yCheck,
+  });
+};
 
+/**
+ * Handle the evaluation.
+ * @param {object} [params = {}] Parameters.
+ * @param {boolean} [params.skipXAPI = false] If true, don't trigger xAPI.
+ */
+C.prototype.handleCheckAnswer = function (params) {
+  const that = this;
+
+  params = params || {};
+
+  this.setViewState('results');
+
+  this.taskCompleted = true;
+  this.answered = true;
+  this.showAllSolutions();
+  this.showScore();
+  this.addExplanation();
+
+  if (!params.skipXAPI) {
     // Emit screenshot
     setTimeout(function () {
       if (H5P && H5P.KLScreenshot) {
@@ -684,18 +713,16 @@ C.prototype.addSolutionButton = function () {
       }
     }, 1000); // Give result time to appear
 
-    var xAPIEvent = that.createXAPIEventTemplate('answered');
-    that.addQuestionToXAPI(xAPIEvent);
-    that.addResponseToXAPI(xAPIEvent);
-    that.trigger(xAPIEvent);
+    var xAPIEvent = this.createXAPIEventTemplate('answered');
+    this.addQuestionToXAPI(xAPIEvent);
+    this.addResponseToXAPI(xAPIEvent);
+    this.trigger(xAPIEvent);
+  }
 
-    // Focus top of task for better focus and read-speaker flow
-    var $nextFocus = that.$introduction ? that.$introduction : that.$container.children().first();
-    $nextFocus.focus();
-  }, true, {
-    'aria-label': this.options.a11yCheck,
-  });
-};
+  // Focus top of task for better focus and read-speaker flow
+  var $nextFocus = that.$introduction ? this.$introduction : this.$container.children().first();
+  $nextFocus.focus();
+}
 
 /**
  * Add explanation/feedback (the part on the bottom part)
@@ -984,6 +1011,8 @@ C.prototype.showSolutions = function () {
  * @public
  */
 C.prototype.resetTask = function () {
+  this.setViewState('task');
+
   this.points = 0;
   this.rawPoints = 0;
   this.answered = false;
@@ -1121,6 +1150,8 @@ C.prototype.getCurrentState = function () {
     }
   }
 
+  state.viewState = this.viewState;
+
   return state;
 };
 
@@ -1194,6 +1225,21 @@ C.prototype.isAudioPlaying = function(checkAudios) {
     }
   }
   return audioPlaying
+};
+
+/**
+ * Set view state.
+ * @param {string} state View state.
+ */
+C.prototype.setViewState = function (state) {
+  if (H5P.DragQuestion.VIEW_STATES.indexOf(state) === -1) {
+    return;
+  }
+
+  // Kidsloop Live session storage will listen
+  this.trigger('kllStoreSessionState', undefined, { bubbles: true, external: true });
+
+  this.viewState = state;
 };
 
 /**
@@ -1360,3 +1406,6 @@ var getControls = function (draggables, dropZones, noDropzone) {
 };
 
 H5P.DragQuestion = C;
+
+/** @constant {string[]} view state names*/
+H5P.DragQuestion.VIEW_STATES = ['task', 'results', 'solutions'];
