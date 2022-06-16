@@ -120,6 +120,7 @@ export default class Draggable extends H5P.EventDispatcher {
       tabindex: '-1',
       role: 'button',
       css: {
+        zIndex: self.id + self.id*10,
         left: self.x + '%',
         top: self.y + '%',
         width: self.width + 'em',
