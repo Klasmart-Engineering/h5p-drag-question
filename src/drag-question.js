@@ -983,7 +983,7 @@ C.prototype.showAllSolutions = function (skipVisuals) {
     this.showButton('try-again');
   }
 
-  if (this.hasButton('check-answer') && (this.options.behaviour.enableRetry === false || this.points === this.getMaxScore())) {
+  if (this.hasButton('check-answer') && (this.options.behaviour.enableRetry === false)) {
     // Max score reached, or the user cannot try again.
     this.hideButton('try-again');
   }
