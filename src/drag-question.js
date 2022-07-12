@@ -836,6 +836,38 @@ C.prototype.resize = function (e) {
    */
   this.$mainContainer = this.$container.parents('.h5p-dragquestion');
 
+  const displayLimits = (
+    this.isRoot() &&
+    H5P.KLDisplay && H5P.KLDisplay.computeDisplayLimitsKLL
+  ) ?
+    H5P.KLDisplay.computeDisplayLimitsKLL(this.$mainContainer.get(0)) :
+    null;
+
+  // Compute available height if limiter kicks in
+  let availableHeight = Infinity;
+  if (displayLimits && this.$mainContainer.find('.h5p-question-content').height() > 0) {
+    const introductionHeight =
+      (this.$mainContainer.find('.h5p-question-introduction').length) ?
+        this.$mainContainer.find('.h5p-question-introduction').outerHeight(true) :
+        0;
+
+    let extraMargin =
+      this.$mainContainer.find('.h5p-question-content').outerHeight(true) -
+      this.$mainContainer.find('.h5p-question-content').outerHeight();
+    if (introductionHeight > 0) {
+      extraMargin /= 2; // margin of title overlaps
+    }
+
+    const buttonsHeight = (this.$mainContainer.find('.h5p-question-buttons')) ?
+      this.$mainContainer.find('.h5p-question-buttons').outerHeight(true) :
+      0;
+
+    availableHeight = displayLimits.height -
+      introductionHeight -
+      extraMargin -
+      buttonsHeight;
+  }
+
   // Auto check?
   if (self.options.behaviour.autoCheckSolutions) {
     this.$mainContainer.addClass('h5p-auto-check');
@@ -865,8 +897,15 @@ C.prototype.resize = function (e) {
   var size = this.options.question.settings.size;
   var ratio = size.width / size.height;
   var parentContainer = this.$container.parent();
+
+  // Compute available width to limit height
+  const availableWidth = availableHeight * ratio;
+
   // Use parent container as basis for resize.
-  var width = parentContainer.width() - parseFloat(parentContainer.css('margin-left')) - parseFloat(parentContainer.css('margin-right'));
+  var width = Math.min(
+    parentContainer.width() - parseFloat(parentContainer.css('margin-left')) - parseFloat(parentContainer.css('margin-right')),
+    availableWidth
+  );
 
   // Check if we need to apply semi full screen fix.
   var $semiFullScreen = self.$container.parents('.h5p-standalone.h5p-dragquestion.h5p-semi-fullscreen');
